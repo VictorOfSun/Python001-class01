@@ -1,3 +1,5 @@
+# week01 第二份作业
+
 import scrapy
 from scrapy.selector import Selector
 from spiders.items import SpidersItem
@@ -40,15 +42,16 @@ class MoviesSpider(scrapy.Spider):
         movies = Selector(response=response).xpath('//div[@class="movie-brief-container"]')
         item = SpidersItem()
 
+        #初始化电影类型type字符串，以便后续相加
         string=''
 
-        item['name'] = movies.xpath('./h1/text()').extract_first()
-        item['time'] = movies.xpath('.//li[3]/text()').extract_first()[:10]
+        item['a_name'] = movies.xpath('./h1/text()').extract_first()
+        item['c_time'] = movies.xpath('.//li[3]/text()').extract_first()[:10]
 
         for x in movies.xpath('.//a/text()').extract():
             string += x
 
-        item['type'] = string.strip()
+        item['b_type'] = string.strip()
 
         yield item
 

@@ -7,6 +7,7 @@ import scrapy
 
 
 class SpidersItem(scrapy.Item):
-    name = scrapy.Field()
-    type = scrapy.Field()
-    time = scrapy.Field()
+    #防止类型顺序排到时间后面
+    a_name = scrapy.Field()
+    b_type = scrapy.Field()
+    c_time = scrapy.Field()

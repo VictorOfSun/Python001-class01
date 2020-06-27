@@ -15,9 +15,6 @@ class SpidersPipeline:
         #把dict转换成dataframe，要先转成list
         movie=[item]
 
-        print(1)
-        print(movie)
-
         movie1 = pd.DataFrame(data=[item])
         #mode='a'是代表追加数据，不覆盖
         movie1.to_csv('./movie1.csv', encoding='utf8', index=False, mode='a', header=False)
