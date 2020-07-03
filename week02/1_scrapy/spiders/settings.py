@@ -69,7 +69,7 @@ DEFAULT_REQUEST_HEADERS = {
 
 # Enable or disable downloader middlewares
 # See https://docs.scrapy.org/en/latest/topics/downloader-middleware.html
-#
+# 增加代理ip
 DOWNLOADER_MIDDLEWARES = {
    'spiders.middlewares.SpidersDownloaderMiddleware': 543,
     'spiders.middlewares.RandomHttpProxyMiddleware':400
