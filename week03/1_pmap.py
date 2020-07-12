@@ -1,9 +1,7 @@
 #-*- coding: utf-8 -*-
-import sys
 import socket
 import subprocess
 import argparse
-import multiprocessing as mp
 from concurrent.futures import ThreadPoolExecutor, ProcessPoolExecutor
 import json
 import time
@@ -27,16 +25,14 @@ def tcp(ip):
     cot = 0
     for i in ip:
         result[i] = []
-        li=[5000,3306]
-        # for port in range(0, 1024):
-        for j in range(2):
+        for port in range(0, 1024):
             try:
                 sk = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
                 sk.settimeout(2)
-                res = sk.connect_ex((i, li[j]))
+                res = sk.connect_ex((i, port))
                 print(res)
                 if res == 0:
-                    result[i].append(li[j])
+                    result[i].append(port)
                 sk.close()
             except Exception as e:
                 print(e)
@@ -46,12 +42,10 @@ def tcp(ip):
 # 多进程
 def proc():
     with ProcessPoolExecutor(args.n) as executor:
-        start_time = time.clock()
         if args.f == 'ping':
             future = executor.submit(ping, ip)
         else:
             future = executor.submit(tcp, ip)
-        end_time = time.clock()
     print(future.result())
     save(future)
 
@@ -66,10 +60,11 @@ def thread():
     print(future.result())
     save(future)
 
+
 # 将扫描结果保存成json文件
 def save(future):
     if args.w != 0:
-        with open(args.w, 'w') as  f:
+        with open(args.w, 'w') as f:
             json.dump(future.result(), f)
 
 

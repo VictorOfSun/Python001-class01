@@ -144,6 +144,7 @@
       <workItem from="1593770713945" duration="862000" />
       <workItem from="1593837049229" duration="23000" />
       <workItem from="1594276872575" duration="29284000" />
+      <workItem from="1594542971779" duration="6273000" />
     </task>
     <servers />
   </component>
@@ -151,26 +152,26 @@
     <option name="version" value="2" />
   </component>
   <component name="WindowStateProjectService">
-    <state width="1493" height="210" key="GridCell.Tab.0.bottom" timestamp="1594389249180">
+    <state width="1478" height="201" key="GridCell.Tab.0.bottom" timestamp="1594547524804">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="210" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1594389249180" />
-    <state width="1493" height="210" key="GridCell.Tab.0.center" timestamp="1594389249179">
+    <state width="1478" height="201" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1594547524804" />
+    <state width="1478" height="201" key="GridCell.Tab.0.center" timestamp="1594547524804">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="210" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1594389249179" />
-    <state width="1493" height="210" key="GridCell.Tab.0.left" timestamp="1594389249178">
+    <state width="1478" height="201" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1594547524804" />
+    <state width="1478" height="201" key="GridCell.Tab.0.left" timestamp="1594547524804">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="210" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1594389249178" />
-    <state width="1493" height="210" key="GridCell.Tab.0.right" timestamp="1594389249179">
+    <state width="1478" height="201" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1594547524804" />
+    <state width="1478" height="201" key="GridCell.Tab.0.right" timestamp="1594547524804">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="210" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1594389249179" />
+    <state width="1478" height="201" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1594547524804" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/Python001_class01$1_requests_bs4.coverage" NAME="1_requests_bs4 Coverage Results" MODIFIED="1593243142644" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/week01" />
-    <SUITE FILE_PATH="coverage/Python001_class01$2_python_engineer__1_.coverage" NAME="2_python_engineer (1) Coverage Results" MODIFIED="1594389249169" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/week03" />
+    <SUITE FILE_PATH="coverage/Python001_class01$2_python_engineer__1_.coverage" NAME="2_python_engineer (1) Coverage Results" MODIFIED="1594549288612" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/week03" />
     <SUITE FILE_PATH="coverage/Python001_class01$2.coverage" NAME="2 Coverage Results" MODIFIED="1594369558735" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/week03" />
     <SUITE FILE_PATH="coverage/Python001_class01$pmap.coverage" NAME="pmap Coverage Results" MODIFIED="1594369621473" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/week03" />
   </component>
