@@ -3,6 +3,8 @@
 因为我自己很容易忘记很多细节性的知识点，所以我就把老师的样例都整合到一起了，方便自己复习
 
 
+### Jupyter Notebook撤销误删除的代码块的解决方法
+https://blog.csdn.net/weixin_45104240/article/details/104769937
 
 ### 数据集
 
