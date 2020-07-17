@@ -17,6 +17,7 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="JupyterTrust" id="5803afde-ddbc-4dcb-b10e-098e338874e8" />
   <component name="ProjectId" id="1dtSIaXtQ2DU0VsavnqgzDpv8ZX" />
   <component name="ProjectViewState">
     <option name="autoscrollFromSource" value="true" />
@@ -146,7 +147,7 @@
       <workItem from="1594276872575" duration="29284000" />
       <workItem from="1594542971779" duration="6845000" />
       <workItem from="1594602399978" duration="18000" />
-      <workItem from="1594898167244" duration="5740000" />
+      <workItem from="1594898167244" duration="7418000" />
     </task>
     <servers />
   </component>
