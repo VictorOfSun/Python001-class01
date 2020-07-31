@@ -29,8 +29,19 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="TERMINAL_CUSTOM_COMMANDS_GOT_IT" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/week06" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.tslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="nodejs_package_manager_path" value="npm" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\Users\lenovo\Desktop\homework\Python001-class01\week06" />
+    </key>
   </component>
   <component name="RunManager" selected="Python.2_python_engineer (1)">
     <configuration name="1_pmap" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
@@ -149,6 +160,12 @@
       <workItem from="1594602399978" duration="18000" />
       <workItem from="1594898167244" duration="7418000" />
       <workItem from="1594949324539" duration="200000" />
+      <workItem from="1595225428870" duration="1262000" />
+      <workItem from="1595301031383" duration="864000" />
+      <workItem from="1595401461306" duration="1434000" />
+      <workItem from="1595468696348" duration="7431000" />
+      <workItem from="1595838768241" duration="13336000" />
+      <workItem from="1596157907078" duration="11754000" />
     </task>
     <servers />
   </component>
@@ -156,6 +173,10 @@
     <option name="version" value="2" />
   </component>
   <component name="WindowStateProjectService">
+    <state x="549" y="167" key="FileChooserDialogImpl" timestamp="1596108435352">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="549" y="167" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1596108435352" />
     <state width="1478" height="201" key="GridCell.Tab.0.bottom" timestamp="1594549825571">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
