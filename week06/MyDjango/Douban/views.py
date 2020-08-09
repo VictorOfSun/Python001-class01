@@ -23,3 +23,5 @@ def select_short(request):
         name = request.POST.get('short')
         shorts = Comment.objects.filter(content__icontains = name)
     return render(request, 'result.html', locals())
+
+
