@@ -8,16 +8,19 @@ class Zoo(object):
         self.name = name
 
     def add_animal(self, obj):
-        # class_name = obj.__class__.__name__
+        # 使用set去重
+        animal = set()
         if hasattr(self, obj.__class__.__name__):
-            if obj in self.obj.__class__.__name__:
-                print('该动物已存在')
+            animals = getattr(self, obj.__class__.__name__)
+            if obj in animals:
+                print("该动物已存在")
             else:
-                self.obj.__class__.__name__[obj] = obj
-                print('该动物已添加成功')
+                animals.add(obj)
+                print("该动物已添加")
         else:
-            setattr(self, obj.__class__.__name__, {obj: obj})
-            print('该动物已添加成功')
+            animal.add(obj)
+            setattr(self, obj.__class__.__name__, animal)
+            print("该动物已添加")
 
 
 # 动物类不允许被实例化
@@ -73,7 +76,7 @@ if __name__ == '__main__':
     # 动物园是否有猫这种动物
     have_cat = getattr(z, 'Cat')
     print(have_cat)
-    # 再添加一次查看是否报错
+    # 再添加一次查看是否重复
     z.add_animal(cat1)
     have_cat = getattr(z, 'Cat')
     print(have_cat)
