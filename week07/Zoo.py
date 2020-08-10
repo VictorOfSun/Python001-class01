@@ -81,4 +81,3 @@ if __name__ == '__main__':
     have_cat = getattr(z, 'Cat')
     print(have_cat)
 
-
