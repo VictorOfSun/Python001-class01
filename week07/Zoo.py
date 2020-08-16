@@ -26,7 +26,7 @@ class Zoo(object):
 # 动物类不允许被实例化
 # 动物类要求定义“类型”、“体型”、“性格”、“是否属于凶猛动物”四个属性
 # 是否属于凶猛动物的判断标准是：“体型 >= 中等”并且是“食肉类型”同时“性格凶猛”
-class Animal(Zoo):
+class Animal(object):
     size = {
         '小': 1,
         '中': 2,
@@ -80,4 +80,3 @@ if __name__ == '__main__':
     z.add_animal(cat1)
     have_cat = getattr(z, 'Cat')
     print(have_cat)
-
