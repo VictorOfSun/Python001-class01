@@ -1,0 +1,198 @@
+{% extends "base_layout.html" %} {% block title %}Welcome{% endblock %} 
+{% load static %}
+{% block head %}
+    {{ block.super }}
+    <link rel="stylesheet" href="{% static 'css/timeline.css' %}">
+    <link rel="stylesheet" href="{% static 'css/morris.css' %}">
+{% endblock %} 
+{% block content %}
+<div class="row">
+    <div class="col-lg-12">
+        <h1 class="page-header">评论</h1>
+    </div>
+</div><!-- /.col-lg-12 -->
+<div class="row">
+    <div class="col-lg-6">
+        <form class="navbar-form navbar-left" role="search" method="post" action="{% url 'select_short' phone_name %}">
+            {% csrf_token %}
+          <div class="form-group">
+            <input type="text" class="form-control" name="short" placeholder="关键字">
+          </div>
+          <div class="radio">
+            <label><input type="radio" name="choice" value="comment">评论</label>
+          </div>
+          <div class="radio">
+            <label><input type="radio" name="choice" value="time">录入时间</label>
+          </div>
+          <button type="submit" class="btn btn-default">搜索</button>
+        </form>
+  </div><!-- /.col-lg-6 -->
+    <!-- /.col-lg-12 -->
+</div>
+
+<!-- /.row -->
+<div class="row">
+    <div class="col-lg-4 col-md-6">
+        <div class="panel panel-primary">
+            <div class="panel-heading">
+                <div class="row">
+                    <div class="col-xs-3">
+                        <i class="fa fa-comments fa-5x"></i>
+                    </div>
+                    <div class="col-xs-9 text-right">
+                        <div class="huge">{{ counter }}</div>
+                        <div>评论数量</div>
+                    </div>
+                </div>
+            </div>
+            <a href="#">
+                <div class="panel-footer">
+                    <span class="pull-left">View Details</span>
+                    <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
+                    <div class="clearfix"></div>
+                </div>
+            </a>
+        </div>
+    </div>
+    <div class="col-lg-4 col-md-6">
+        <div class="panel panel-yellow">
+            <div class="panel-heading">
+                <div class="row">
+                    <div class="col-xs-3">
+                        <i class="fa fa-shopping-cart fa-5x"></i>
+                    </div>
+                    <div class="col-xs-9 text-right">
+                        <div class="huge">{{ sent_avg }}</div>
+                        <div>情感倾向</div>
+                    </div>
+                </div>
+            </div>
+            <a href="#">
+                <div class="panel-footer">
+                    <span class="pull-left">View Details</span>
+                    <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
+                    <div class="clearfix"></div>
+                </div>
+            </a>
+        </div>
+    </div>
+    <div class="col-lg-4 col-md-6">
+        <div class="panel panel-red">
+            <div class="panel-heading">
+                <div class="row">
+                    <div class="col-xs-3">
+                        <i class="fa fa-support fa-5x"></i>
+                    </div>
+                    <div class="col-xs-9 text-right">
+                        <div class="huge">{{ plus }}</div>
+                        <div>正向数量</div>
+                    </div>
+                </div>
+            </div>
+            <a href="#">
+                <div class="panel-footer">
+                    <span class="pull-left">View Details</span>
+                    <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
+                    <div class="clearfix"></div>
+                </div>
+            </a>
+        </div>
+    </div>
+</div>
+<!-- /.row -->
+<div class="row">
+    <div class="col-lg-8">
+
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <i class="fa fa-bar-chart-o fa-fw"></i> 舆情数据展示
+            </div>
+            <!-- /.panel-heading -->
+            <div class="panel-body">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="table-responsive">
+                            <table class="table table-bordered table-hover table-striped">
+                                <thead>
+                                    <tr>
+                                        <th>录入时间</th>
+                                        <th>评论</th>
+                                        <th>情感倾向</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    {% for short in shorts %}
+                                        <tr>
+<!--                                            <td>{{short.name}}</td>-->
+                                            <td>{{short.time}}</td>
+                                            <td>{{short.comment}}</td>
+                                            <td>{{short.sentiment}}</td>
+                                        </tr>
+                                    {% endfor %}
+                                </tbody>
+                            </table>
+                        </div>
+                        <!-- /.table-responsive -->
+                    </div>
+                    <!-- /.col-lg-4 (nested) -->
+                    <div class="pagination col-md-offset-3" >
+                        <span class="step-links">
+                            {% if shorts.has_previous %}
+                                {% if res %}
+                                    <a href="?page={{ shorts.previous_page_number }}&res={{res}}&choice={{choice}}">上一页 &raquo;</a>
+                                {% else %}
+                                     <a href="?page={{ shorts.previous_page_number }}">&laquo; 上一页</a>
+                                {% endif %}
+                            {% endif %}
+
+                            <span class="current">
+                                Page {{ shorts.number }} of {{ shorts.paginator.num_pages }}.
+                            </span>
+
+                            {% if shorts.has_next %}
+                                {% if res %}
+                                    <a href="?page={{ shorts.next_page_number }}&res={{res}}&choice={{choice}}">下一页 &raquo;</a>
+                                {% else %}
+                                    <a href="?page={{ shorts.next_page_number }}">下一页 &raquo;</a>
+                                {% endif %}
+                            {% endif %}
+                        </span>
+                    </div>
+                </div>
+                <!-- /.row -->
+            </div>
+            <!-- /.panel-body -->
+        </div>
+        <!-- /.panel -->
+
+    </div>
+
+    <!-- /.col-lg-8 -->
+    <div class="col-lg-4">
+        <div>
+            <div id=lg05>{{ plus }}</div>
+            <div id=lt05>{{ minus }}</div>
+        </div>
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <i class="fa fa-bar-chart-o fa-fw"></i> Donut Chart Example
+            </div>
+            <div class="panel-body">
+                <div id="morris-donut-chart"></div>
+                <a href="#" class="btn btn-default btn-block">View Details</a>
+            </div>
+            <!-- /.panel-body -->
+        </div>
+        <!-- /.panel -->
+    </div>
+    <!-- /.col-lg-4 -->
+</div>
+<!-- /.row -->
+{% endblock %}
+{% block js %}
+    {{ block.super }}
+    <script src="{% static 'js/raphael-min.js' %}"></script>
+    <script src="{% static 'js/morris.min.js' %}"></script>
+    <script src="{% static 'js/morris-data.js' %}"></script>
+
+{% endblock %}
